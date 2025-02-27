@@ -1,21 +1,49 @@
-Clone the repo: git clone https://github.com/Mohdsahil/node-express-backend-articture.git
+# Node.js Microservices - Dockerized Setup
 
-Install dependencies: npm install
-Node Version - v20.12.0
--------------------------------------------
-Steps to start the project
-1. Run npm i to install necessary dependencies
-2. Navigate to directories using cd
-3. Run command "npm run start" to start the project 
+This repository contains three Node.js microservices that have been Dockerized for easy deployment. Each service runs inside its own container, and they are orchestrated using Docker Compose.
 
---------------------------------------------
+# Prerequisites
 
-add DB_URL and JWT_SECRET
-PORT=3001
-DB_URL=<YOUR DB URL>
-JWT_SECRET=<YOUR SECRET>
-BASE_URL=http://localhost:3001
+Before you begin, ensure you have the following installed:
 
-```
-start backend: npm run start
-```
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+# Clone the Repository
+
+git clone https://github.com/AnilBai/docker-task.git
+
+cd docker-task
+
+
+# Running the Services with Docker
+
+To run the microservices using Docker, follow the steps below:
+
+1. Build the Docker images  
+Run the following command in the root directory:
+
+docker-compose build
+
+
+2. Start the services  
+To bring up all microservices:
+
+docker-compose up 
+
+3. Running in detached mode  
+If you want to run containers in the background:
+
+docker-compose up -d
+
+
+4. Check running containers  
+To verify the containers are running:
+
+docker ps
+
+
+5. Stop the services  
+To stop all running containers:
+
+docker-compose down
